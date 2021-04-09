@@ -1,3 +1,5 @@
+/* Iterative Approach */
+
 const binarySearch = (array, target) => {
   if (Array.isArray(array) && array.length && typeof target === 'number') {
     let startIndex = 0;
@@ -18,5 +20,30 @@ const binarySearch = (array, target) => {
   }
   return 'Incorrect inputs';
 };
+
+/* Recursive Approach */
+
+// const binarySearch = (
+//   array,
+//   target,
+//   startIndex = 0,
+//   endIndex = array.length - 1
+// ) => {
+//   const middleIndex = Math.floor((startIndex + endIndex) / 2);
+//
+//   if (startIndex > endIndex) {
+//     return null;
+//   }
+//
+//   if (array[middleIndex] === target) {
+//     return middleIndex;
+//   }
+//
+//   if (array[middleIndex] > target) {
+//     return binarySearch(array, target, 0, middleIndex - 1);
+//   } else {
+//     return binarySearch(array, target, middleIndex + 1, endIndex);
+//   }
+// };
 
 export default binarySearch;
